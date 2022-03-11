@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 3. Run  `npm install`
 4. Run  `ng add @angular/material`
 5. Run  `npm i serializr`
-6. Enter your EthereumScan API TOKEN in transaction-services.service.td line No: 12 
+6. Enter your Etherscan API TOKEN in transaction-services.service.td line No: 12 
 
 ## Development server
 
