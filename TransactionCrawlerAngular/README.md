@@ -1,6 +1,13 @@
 # TransactionCrawlerAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+## Project configuration
+
+1. Clone the repository
+2. Navigate to reposoritory in cmd or terminal
+3. Run  `npm install`
+4. Run  `ng add @angular/material`
+5. Run  `npm i serializr`
 
 ## Development server
 
