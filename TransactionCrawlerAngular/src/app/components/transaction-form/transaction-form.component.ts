@@ -9,27 +9,26 @@ import { TransactionServiceService } from 'src/app/services/transaction-service.
   styleUrls: ['./transaction-form.component.scss']
 })
 export class TransactionFormComponent implements OnInit {
-
   checked = false;
   today: Date = new Date();
   nextDay: Date = new Date();
   error: string = '';
   
-  public transaction: TransactionRequest;
+  public transactionRequest: TransactionRequest;
   public transactions: Transactions;
 
   constructor(private transactionService: TransactionServiceService) { }
 
   ngOnInit(): void {
-    this.nextDay.setDate(this.today.getDate()+1);
-    this.transaction = new TransactionRequest();
+    // this.nextDay.setDate(this.today.getDate()+1);
+    this.transactionRequest = new TransactionRequest();
   }
 
   ngOnChanges(): void {
   }
 
   onSubmit(){
-    this.transactionService.getTransactionsFromAddress(this.transaction.transactionId, this.transaction.startBlock).subscribe(
+    this.transactionService.getTransactionsFromAddress(this.transactionRequest.address, this.transactionRequest.startBlock).subscribe(
       res => { this.transactions = res}
     )
   }

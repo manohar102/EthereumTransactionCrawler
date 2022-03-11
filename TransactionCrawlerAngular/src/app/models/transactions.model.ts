@@ -1,6 +1,9 @@
 import { serializable, serialize, deserialize } from "serializr";
 import { TransactionDetails } from "./transaction-details.model";
 export class Transactions{
+    static deserialize(data: void | Transactions) {
+      throw new Error('Method not implemented.');
+    }
     @serializable
     public status : String;
     @serializable
@@ -9,7 +12,6 @@ export class Transactions{
     public result : TransactionDetails[];
 
     public deserialize(input:any): this{
-        console.log(input)
         return Object.assign(this, deserialize(Transactions, input));
     };
 

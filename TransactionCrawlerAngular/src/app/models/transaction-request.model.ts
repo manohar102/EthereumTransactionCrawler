@@ -1,7 +1,7 @@
 import { serializable, serialize, deserialize } from "serializr";
 export class TransactionRequest{
     @serializable
-    public transactionId : String;
+    public address : String;
     @serializable
     public startBlock : String;
     @serializable

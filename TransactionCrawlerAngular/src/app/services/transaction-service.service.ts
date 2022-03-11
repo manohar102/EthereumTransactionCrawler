@@ -30,4 +30,12 @@ export class TransactionServiceService {
       catchError(()=> throwError("Problem while fetching balance with address"))
     )
   }
+
+  public getTransactionsFromAddressPage(address: String, startBlock: String, page:number):Observable<Transactions>{
+    return this.http.get<Transactions>("https://api.etherscan.io/api?module=account&action=txlist&address="+address+"&startblock="+startBlock+"&page="+page+"&offset=10&sort=asc&apikey="
+    +this.TOKEN_KEY).pipe(
+      map(data => data), 
+      catchError(()=> throwError("Problem while fetching balance with address"))
+    )
+  }
 }
