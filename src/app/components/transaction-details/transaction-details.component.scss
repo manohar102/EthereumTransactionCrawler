@@ -1,0 +1,18 @@
+.table-container {
+  width: 100%;
+  max-width: 90vw;
+  overflow-x: auto;
+  margin-top: 3vh;
+}
+
+.transaction-table {
+  width: 100%;
+  min-width: 1000px;
+}
+
+.address-cell {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
